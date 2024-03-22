@@ -185,20 +185,20 @@ export class FirstComponentComponent {
 
     let firstNumber: number = 1;
     let secondNumber: number = 2;
-    let operator: string = '5';
+    let operator: string = '/';
 
     switch(operator) {
       case '+':
-        console.log(`${firstNumber} ${operator} ${secondNumber} = 3 `);
+        console.log(`${firstNumber} ${operator} ${secondNumber} = ${firstNumber + secondNumber} `);
         break;
       case '-':
-        console.log(`${firstNumber} ${operator} ${secondNumber} = -1`);
+        console.log(`${firstNumber} ${operator} ${secondNumber} = ${firstNumber - secondNumber}`);
         break;
       case '*':
-        console.log(`${firstNumber} ${operator} ${secondNumber} = 2`);
+        console.log(`${firstNumber} ${operator} ${secondNumber} = ${firstNumber * secondNumber}`);
         break;
       case '/':
-        console.log(`${firstNumber} ${operator} ${secondNumber} = 0.5`);
+        console.log(`${firstNumber} ${operator} ${secondNumber} = ${firstNumber / secondNumber}`);
         break;
         default:
           console.log('Invalid operator!');
