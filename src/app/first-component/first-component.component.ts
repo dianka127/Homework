@@ -210,6 +210,64 @@ export class FirstComponentComponent {
 
 
 
+    //Exercise 1.Sum of array elements
+
+
+    let i = 0;
+    let numbers = [1,2,3,4,5];
+    const sum  = numbers.forEach(number => i = i + number);
+    console.log(i);
+
+
+
+
+    //Exercise 2. filtering positive numbers
+
+    let numbs = [-2,3,-5,7,-11,10];
+    const filter = numbs.filter(number => number > 0)
+    console.log(filter);
+
+
+
+    //Exercise 3. union of two arrays
+
+    let array1 = [1,2];
+    let array2 = [3,4];
+    console.log([...array1,...array2]);
+
+    //Exercise 4. finding the maximum element
+
+    let num = [10,20,5,8,15];
+    let a = 0;
+    const find = num.forEach(number => {
+      if(number>a) {
+        a = number;
+      }
+      return number;
+    })
+    console.log(a);
+
+
+
+
+    //Exercise 5. counting the number of elements in an array
+
+    let array3 = [1,2,3,4,5];
+    const length = array3.length;
+    console.log(length);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
