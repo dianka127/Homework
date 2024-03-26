@@ -205,20 +205,12 @@ export class FirstComponentComponent {
     }
 
 
-
-
-
-
-
     //Exercise 1.Sum of array elements
-
 
     let i = 0;
     let numbers = [1,2,3,4,5];
-    const sum  = numbers.forEach(number => i = i + number);
+    numbers.forEach(number => i += number);
     console.log(i);
-
-
 
 
     //Exercise 2. filtering positive numbers
@@ -226,7 +218,6 @@ export class FirstComponentComponent {
     let numbs = [-2,3,-5,7,-11,10];
     const filter = numbs.filter(number => number > 0)
     console.log(filter);
-
 
 
     //Exercise 3. union of two arrays
@@ -239,14 +230,13 @@ export class FirstComponentComponent {
 
     let num = [10,20,5,8,15];
     let a = 0;
-    const find = num.forEach(number => {
+    num.forEach(number => {
       if(number>a) {
         a = number;
       }
       return number;
     })
     console.log(a);
-
 
 
 
@@ -257,27 +247,41 @@ export class FirstComponentComponent {
     console.log(length);
 
 
+    //Exercise 6. search for unique elements
+
+    let array4 = [1,2,3,2,4,3,5];
+    const uniqueElem = array4.filter((number,index) => array4.indexOf(number)===index);
+    console.log(uniqueElem);
 
 
+    //Exercise 7.search for frequently occurring element
+
+    let obj: any = {};
+    const array5 = [1,2,3,2,4,3,2,5,2];
+    let verible = 0;
+
+    array5.forEach(element => {
+      if(Object.keys(obj).includes(String(element))) {
+        obj[element] += 1;
+      } else {
+        obj[element] = 1;
+      }
+    });
+      for(let key of Object.keys(obj)) {
+        if (obj[key] > verible) {
+          verible = obj[key];
+        }
+        return obj[key];
+      }
+
+      console.log(verible);
 
 
+    //Exercise 8.array expansion
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    let array6 = [1,2,3,4,5];
+    const reverse = array6.reverse();
+    console.log(reverse);
 
   }
 }
