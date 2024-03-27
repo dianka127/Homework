@@ -256,25 +256,24 @@ export class FirstComponentComponent {
 
     //Exercise 7.search for frequently occurring element
 
-    let obj: any = {};
+    let map: any = {};
     const array5 = [1,2,3,2,4,3,2,5,2];
-    let verible = 0;
+    let result = "0";
 
     array5.forEach(element => {
-      if(Object.keys(obj).includes(String(element))) {
-        obj[element] += 1;
+      if(Object.keys(map).includes(String(element))) {
+        map[element] += 1;
       } else {
-        obj[element] = 1;
+        map[element] = 1;
       }
     });
-      for(let key of Object.keys(obj)) {
-        if (obj[key] > verible) {
-          verible = obj[key];
+      for(let key of Object.keys(map)) {
+        if (map[key] > result) {
+          result = key;
         }
-        return obj[key];
       }
 
-      console.log(verible);
+      console.log(result);
 
 
     //Exercise 8.array expansion
