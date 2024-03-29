@@ -282,5 +282,37 @@ export class FirstComponentComponent {
     const reverse = array6.reverse();
     console.log(reverse);
 
+
+
+    // objects
+
+      const products = [
+        {
+          id: 'p1',
+          name: 'Product 1',
+          price: 10,
+          category: 'Category A'
+        },
+        {
+          id: 'p2',
+          name: 'Product 2',
+          price: 20,
+          category: 'Category B'
+        },
+        {
+          id: 'p3',
+          name: 'Product 3',
+          price: 30,
+          category: 'Category A'
+        }
+      ]
+      const productsObj = products.reduce(function (result, user) {
+        return {
+          ...result,
+          [user.id]: user,
+        };
+      }, {})
+      console.log(productsObj);
+
   }
 }
