@@ -309,10 +309,113 @@ export class FirstComponentComponent {
       const productsObj = products.reduce(function (result, user) {
         return {
           ...result,
-          [user.id]: user,
+          [user.id]: {name: user.name, price: user.price, category: user.category}
         };
       }, {})
       console.log(productsObj);
 
+
+  //1
+
+const fruits = ['kiwi', 'apple', 'kiwi', 'orange', 'kiwi','apple'];
+const count: any = {};
+fruits.forEach(f => {
+  if(!count[f]) {
+    count[f] = 1;
+  } else {
+    count[f] ++;
   }
+})
+
+//2
+
+const students = [
+  {name: 'alex', age: 20},
+  {name: 'mike', age: 24},
+  {name: 'masha', age: 20},
+  {name: 'stas', age: 18},
+];
+
+const grouped: any = {};
+
+students.forEach(number => {
+  if(!grouped[number.age]) {
+    grouped[number.age] = [number]
+  } else {
+    grouped[number.age].push(number);
+  }
+});
+
+//3
+
+const friends = [
+  {name: 'alex', pizzas: ['cheese', 'pepperoni']},
+  {name: 'mike', pizzas: ['salami', 'margarita']},
+  {name: 'stas', pizzas: ['meat']},
+  {name: 'anna', pizzas: ['fish']}
+];
+
+const pizzas = friends.reduce(function (accum: any, current) {
+  return [...accum, ...current.pizzas];
+}, []);
+console.log(pizzas);
+
+
+
+
+//function
+//№ 1
+    const task1 = this.letters(['a','b','c','d'], ';' );
+    console.log(task1);
+
+//№ 2
+    const task2 = this.students([{name: 'Diana', age: 23, point: 8 }, {name: 'Oleg', age: 23, point: 5}, {name: 'Daria', age: 23, point: 6}]);
+    console.log(task2);
+
+//№3
+    const task3 = this.evenNumbers(15);
+    console.log(task3);
+
+//№4
+    const task4 = this.noRepeat([1,2,2,3,4,4],[5,5,3,3,2,2]);
+    console.log(task4);
+
+  }
+
+//№1
+  letters(a: any = [], b: any = '') {
+    return a.join(b);
+  }
+
+//№2
+  students([{}]) {
+
+    return name  ;
+  }
+
+//№3
+  evenNumbers(number: number) {
+    const arrayEven = [number];
+    for(let i=arrayEven; i % 2 === 0; --i) {
+      return number;
+    }
+    arrayEven.forEach(num => {
+      if (num % 2 === 0) {
+        return --num;
+      }
+    })
+
+  }
+
+//#4
+  noRepeat(array1:any = [], array2: any = []) {
+    const array3 = [...array1, ...array2];
+    return array3.filter((num,ind) => array3.indexOf(num)===ind);
+    }
+
+
 }
+
+
+
+
