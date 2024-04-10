@@ -365,7 +365,7 @@ console.log(pizzas);
 
 //function
 //№ 1
-    const task1 = this.letters(['a','b','c','d'], ';' );
+    const task1 = this.letters(['a','b','c','d'], '; ' );
     console.log(task1);
 
 //№ 2
@@ -388,30 +388,33 @@ console.log(pizzas);
   }
 
 //№2
-  students([{}]) {
-
-    return name  ;
+  students([a = {name: 'Ivan', age: 0, point: 0}, b = {name: 'Ivan', age: 0, point: 0}, c = {name: 'Ivan', age: 0, point: 0}]) {
+    if (a.point>7) {
+      return name;
+    }
   }
 
 //№3
   evenNumbers(number: number) {
     const arrayEven = [number];
-    for(let i=arrayEven; i % 2 === 0; --i) {
-      return number;
-    }
-    arrayEven.forEach(num => {
+    arrayEven.reduce(function (acum:any,current) {
+      --current
+      return current % 2 === 0;
+    }, [])
+
+    /* arrayEven.forEach(num => {
       if (num % 2 === 0) {
         return --num;
       }
-    })
+    }) */
 
   }
 
 //#4
   noRepeat(array1:any = [], array2: any = []) {
-    const array3 = [...array1, ...array2];
-    return array3.filter((num,ind) => array3.indexOf(num)===ind);
-    }
+    const combinedArray = [...array1, ...array2];
+    return combinedArray.filter((num,ind) => combinedArray.indexOf(num)===ind);
+  }
 
 
 }
