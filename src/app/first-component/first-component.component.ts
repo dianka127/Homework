@@ -369,7 +369,7 @@ console.log(pizzas);
     console.log(task1);
 
 //№ 2
-    const task2 = this.students([{name: 'Diana', age: 23, point: 8 }, {name: 'Oleg', age: 23, point: 5}, {name: 'Daria', age: 23, point: 6}]);
+    const task2 = this.chooseStudents([{name: 'Diana', age: 23, point: 8 }, {name: 'Oleg', age: 23, point: 5}, {name: 'Daria', age: 23, point: 6}, {name: 'Olga', age: 23, point: 9} ]);
     console.log(task2);
 
 //№3
@@ -388,9 +388,10 @@ console.log(pizzas);
   }
 
 //№2
-  students([a = {name: 'Ivan', age: 0, point: 0}, b = {name: 'Ivan', age: 0, point: 0}, c = {name: 'Ivan', age: 0, point: 0}]) {
-    if (a.point>7) {
-      return name;
+  chooseStudents(students: any = []) {
+    const bestStudents = [];
+    if (students.point > 7) {
+      bestStudents.push(students.name);
     }
   }
 
@@ -401,12 +402,6 @@ console.log(pizzas);
       --current
       return current % 2 === 0;
     }, [])
-
-    /* arrayEven.forEach(num => {
-      if (num % 2 === 0) {
-        return --num;
-      }
-    }) */
 
   }
 
