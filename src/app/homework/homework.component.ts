@@ -26,16 +26,9 @@ export class HomeworkComponent {
       }
     })
 
-    /* return result; */
+    return result;
   }
 
 
- /*  chooseStudents(students:any = []) {
-    const result:any = {};
-    students.reduce(function(acum,current) => {
-
-    }, {})
-    return result;
-  } */
 }
 
