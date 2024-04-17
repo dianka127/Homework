@@ -388,21 +388,25 @@ console.log(pizzas);
   }
 
 //№2
-  chooseStudents(students: any = []) {
-    const bestStudents = [];
-    if (students.point > 7) {
-      bestStudents.push(students.name);
+chooseStudents(students: any = []) {
+  const result: any[] = [];
+  students.forEach((student:any) => {
+    if(student.point> 7) {
+      result.push(student.name);
     }
-  }
+  })
+  return result;
+}
 
 //№3
-  evenNumbers(number: number) {
-    const arrayEven = [number];
-    arrayEven.reduce(function (acum:any,current) {
-      --current
-      return current % 2 === 0;
-    }, [])
-
+  chooseNumbers(number: number) {
+    const evenNumbers = [];
+    for(let i=0; i<number; i++) {
+      if(i % 2 === 0) {
+        evenNumbers.push(i);
+      }
+    }
+    return evenNumbers;
   }
 
 //#4
