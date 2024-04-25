@@ -373,7 +373,7 @@ console.log(pizzas);
     console.log(task2);
 
 //№3
-    const task3 = this.evenNumbers(15);
+    const task3 = this.chooseNumbers(15);
     console.log(task3);
 
 //№4
@@ -389,12 +389,15 @@ console.log(pizzas);
 
 //№2
 chooseStudents(students: any = []) {
-  const result: any[] = [];
-  students.forEach((student:any) => {
-    if(student.point> 7) {
-      result.push(student.name);
+  const result = {bestStudents: [], worstStudents: []};
+  students.forEach ((student) => {
+    if(student.point > 6) {
+      result.bestStudents.push(student.name);
+    } else if (student.point < 6) {
+      result.worstStudents.push(student.name);
     }
   })
+
   return result;
 }
 
