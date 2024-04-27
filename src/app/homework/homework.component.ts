@@ -11,12 +11,23 @@ import { TestComponent } from "../test/test.component";
     imports: [TestComponent]
 })
 export class HomeworkComponent implements OnInit {
-
-  message: string;
+greeting: string;
 
 ngOnInit(): void {
   console.log('ngOnInit')
 }
 
+displayMessageFromChild(message) {
+  this.greeting = message;
 }
+
+MessageFromChild() {
+  if(true) {
+    console.log('Hello from child component');
+  }
+}
+
+
+}
+
 

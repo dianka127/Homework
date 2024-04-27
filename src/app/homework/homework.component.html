@@ -1,5 +1,4 @@
-<app-test [footer]="'+375447008318'" (initializationEvent)="message"></app-test>
-
-<p>{{message}}</p>
+<app-test [footer]="'+375447008318'" (initializationEvent)="displayMessageFromChild($event)" (initEvent)="MessageFromChild()"></app-test>
 
 
+<p>{{greeting}}</p>
