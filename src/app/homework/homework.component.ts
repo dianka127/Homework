@@ -17,15 +17,12 @@ ngOnInit(): void {
   console.log('ngOnInit')
 }
 
-displayMessageFromChild(message) {
-  this.greeting = message;
+
+messageFromChild(message: string) {
+  console.log(message);
 }
 
-MessageFromChild() {
-  if(true) {
-    console.log('Hello from child component');
-  }
-}
+
 
 
 }

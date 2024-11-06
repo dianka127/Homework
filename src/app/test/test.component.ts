@@ -9,13 +9,13 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 @Input() footer: any;
-@Output() initializationEvent = new EventEmitter<string>();
-@Output() initEvent = new EventEmitter<string>();
+@Output() onClickEvent = new EventEmitter<string>();
+
 ngOnInit(): void {
-  this.initializationEvent.emit('hello');
+
 }
 
 handleButtonClick() {
-  this.initEvent.emit();
+  this.onClickEvent.emit('Hello from child component');
 }
 }

@@ -1,3 +1,23 @@
-<app-homework></app-homework>
+<!-- <app-homework></app-homework> -->
+
+<router-outlet></router-outlet>
+
+<p>UserName: {{ username }}</p>
+<p>{{ username }}'s favorite framework: {{ favoriteFramework }}</p>
+<label for="framework">
+  Favorite Framework:
+  <input id="framework" type="text" [(ngModel)] = "favoriteFramework"/>
+</label>
+<button (click)="showFramework()">Show Framework</button>
+
+
+
+
+<form name="my-form">
+  <div class="article">Article</div>
+  <div class="long article">Long article</div>
+</form>
+
+
 
 
